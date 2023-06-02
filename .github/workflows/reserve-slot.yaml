@@ -1,4 +1,4 @@
-name: Check Appointment
+name: Reserve Slot
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  reserve:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
