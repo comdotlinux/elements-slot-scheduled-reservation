@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+    - run: chmod +x ./reserve-next-slot.sh
     - run: ./reserve-next-slot.sh
       env:
         ELEMENTS_EMAIL: ${{ secrets.ELEMENTS_EMAIL }}
