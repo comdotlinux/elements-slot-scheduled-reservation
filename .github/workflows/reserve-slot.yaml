@@ -2,7 +2,7 @@ name: Reserve Slot
 
 on:
   schedule:
-    - cron: "* 12 * * SUN,TUE,FRI"
+    - cron: "0 12 * * SUN,TUE,FRI"
   workflow_dispatch:
 
 jobs:
