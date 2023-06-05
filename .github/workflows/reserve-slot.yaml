@@ -13,14 +13,24 @@ jobs:
 
     - uses: cypress-io/github-action@v5
       with:
+        record: true
         browser: chrome
         headless: true
       env:
         CYPRESS_ELEMENTS_EMAIL: ${{ secrets.ELEMENTS_EMAIL }}
         CYPRESS_ELEMENTS_PASSWORD: ${{ secrets.ELEMENTS_PASSWORD }}
 
+
     - name: Upload Artifact For Reservation Proof
       if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: slot-reserved
+        path: cypress/screenshots/reserve.cy.js/slot-reserved.png
+        retention-days: 3
+
+    - name: Upload Artifact For Reservation Failure
+      if: failure()
       uses: actions/upload-artifact@v3
       with:
         name: appointment-available.mp4
