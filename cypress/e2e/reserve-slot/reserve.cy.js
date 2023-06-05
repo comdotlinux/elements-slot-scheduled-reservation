@@ -8,9 +8,12 @@ describe('Elements Gym', () => {
 
 		cy.get('#select_studio', { timeout: 20_000 }).select('TIMESLOTS Balanstraße')
         
+		cy.get('div.course-table', { timeout: 20_000 })
+		.find('a.button')
+		.contains('Platz reservieren')
         cy.get('div.course-table', { timeout: 20_000 })
 			.find('a.button')
-			.contains('Platz reservieren')
+			.should('have.text', 'Platz reservieren')
 			.click()
 			
 		cy.wait(100)
