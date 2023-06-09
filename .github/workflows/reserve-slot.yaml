@@ -14,7 +14,6 @@ jobs:
     - uses: cypress-io/github-action@v5
       with:
         browser: chrome
-        headless: true
       env:
         CYPRESS_ELEMENTS_EMAIL: ${{ secrets.ELEMENTS_EMAIL }}
         CYPRESS_ELEMENTS_PASSWORD: ${{ secrets.ELEMENTS_PASSWORD }}
