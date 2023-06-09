@@ -9,9 +9,13 @@
     1. Or For this repo the link is : https://github.com/comdotlinux/elements-slot-scheduled-reservation/settings/secrets/actions
 1. Create a secret named `ELEMENTS_EMAIL` with value as your email
 1. Create a secret named `ELEMENTS_PASSWORD` with value as your time slot reservation password
-1. Goto Actions > Reserve Slot > find text `This workflow has a workflow_dispatch event trigger.` and next to it click the button "Run Workflow" and then "Run Workflow" to check that it works
-1. In the Run > reserve > Run ./reserve-next-slot.sh > you should be able to find the text : `Sie sind in diesen Kurs eingeschrieben!`
+1. Goto Actions > Reserve Slot > Artifacts > slot-reserved
+    1. It should look something like this ![screenshot zip](./image.png) 
+1. Download the file and unzip it, you should have a screenshot of your reservation
 1. You are Done!
 
 * Above steps are only required once.
 * There should now be a schedule that runs theis every Sunday, Tuesday and Friday at 12 PM.
+* If You want to change the days you want to reserve, just edit the file .github > workflows > reserve-slot.yaml and find the text `cron`
+    * Change the SUN,TUE,FRI to any week days or `*` for each day :)
+    * Commit the file and your schedule will run accordingly.
