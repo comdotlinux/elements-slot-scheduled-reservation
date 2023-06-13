@@ -1,0 +1,13 @@
+name: Reserve Slot
+
+on:
+  pull_request:
+    types: [opened, edited, reopened]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - run: echo "is a fork? ${{ github.event.pull_request.head.repo.fork }}"
