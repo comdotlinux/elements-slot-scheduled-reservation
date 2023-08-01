@@ -15,8 +15,9 @@
 1. You are Done!
 
 * Above steps are only required once.
-* There should now be a schedule that runs theis every Sunday, Tuesday and Friday at 12 PM.
+* There should now be a schedule that runs every day at the given time.
 * If You want to change the days you want to reserve, just edit the file .github > workflows > reserve-slot.yaml and find the text `cron`
-    * Change the SUN,TUE,FRI to any week days or `*` for each day :)
+    * The format is a cron expression that github understands. See [here](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule) for details
+    * Change the it as you please but keep in mind this reserves for the next day so run it at most once every day and also before 1800 Hrs (this is when the window closes)
     * Commit the file and your schedule will run accordingly.
 --
