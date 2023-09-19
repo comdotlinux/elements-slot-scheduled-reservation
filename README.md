@@ -19,3 +19,5 @@
 * If You want to change the days you want to reserve, just edit the file .github > workflows > reserve-slot.yaml and find the text `cron`
     * Change the SUN,TUE,FRI to any week days or `*` for each day :)
     * Commit the file and your schedule will run accordingly.
+ 
+Editted on 19.09.23
