@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - uses: cypress-io/github-action@v5
+    - uses: cypress-io/github-action@v6
       with:
         browser: chrome
       env:
