@@ -2,7 +2,7 @@ name: Reserve Slot
 
 on:
   schedule:
-    - cron: "0 8 * * *" # Use "0 8 * * SUN,TUE,FRI" to only reserve for the next day like Monday, Wednesday and Saturday.
+    - cron: "0 8 * * SUN,TUE"
   workflow_dispatch:
 
 jobs:

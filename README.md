@@ -20,4 +20,5 @@
     * The format is a cron expression that GitHub understands. See [here](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule) for details
     * Change it as you please but keep in mind this reserves for the next day so run it at most once every day and also before 1800 Hrs (this is when the window closes)
     * Commit the file and your schedule will run accordingly.
---
+ 
+Editted on 19.09.23
